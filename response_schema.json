@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "response_schema",
+  "type": "object",
+  "properties": {
+    "post1": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "alt_text": { "type": "string" },
+        "caption": { "type": "string" },
+        "citations": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "hashtags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["text", "alt_text", "caption", "citations", "hashtags"]
+    },
+    "post2": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "alt_text": { "type": "string" },
+        "caption": { "type": "string" },
+        "citations": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "hashtags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["text", "alt_text", "caption", "citations", "hashtags"]
+    }
+  },
+  "required": ["post1", "post2"]
+}
